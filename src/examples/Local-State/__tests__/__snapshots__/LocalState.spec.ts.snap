@@ -1,0 +1,61 @@
+// Vitest Snapshot v1
+
+exports[`LocalState.vue > should match snapshot 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <h2
+    class="pageTitle text-center mt-6"
+  >
+    Listing data from local state
+  </h2>
+  <section
+    class="mt-10 mb-12"
+  >
+    <ul
+      class="grid gap-x-3 grid-cols-2 lg:w-3/4"
+    >
+      
+      <li>
+        <span>
+          10: 
+        </span>
+      </li>
+      <li>
+        <span>
+          Close Rick-counters of the Rick Kind: 
+        </span>
+      </li>
+      <li>
+        <span>
+          April 7, 2014: 
+        </span>
+      </li>
+      <li>
+        <span>
+          S01E10: 
+        </span>
+      </li>
+      <li>
+        <span>
+          https://rickandmortyapi.com/api/episode/10: 
+        </span>
+      </li>
+      <li>
+        <span>
+          2017-11-10T12:56:34.747Z: 
+        </span>
+      </li>
+      
+    </ul>
+  </section>
+  <button
+    class="moreInfo"
+  >
+    showInfo
+  </button>
+  <!--v-if-->
+  
+</div>
+`;

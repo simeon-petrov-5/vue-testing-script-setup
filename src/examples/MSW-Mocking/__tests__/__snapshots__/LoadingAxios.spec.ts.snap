@@ -1,0 +1,78 @@
+// Vitest Snapshot v1
+
+exports[`LoadingAxios.vue > should match snapshot 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <h1>
+    Dummy Loading page
+  </h1>
+  <!--v-if-->
+  <ul>
+    
+    <li>
+      Rick Sanchez
+    </li>
+    <li>
+      Morty Smith
+    </li>
+    <li>
+      Summer Smith
+    </li>
+    <li>
+      Beth Smith
+    </li>
+    <li>
+      Jerry Smith
+    </li>
+    <li>
+      Abadango Cluster Princess
+    </li>
+    <li>
+      Abradolf Lincler
+    </li>
+    <li>
+      Adjudicator Rick
+    </li>
+    <li>
+      Agency Director
+    </li>
+    <li>
+      Alan Rails
+    </li>
+    <li>
+      Albert Einstein
+    </li>
+    <li>
+      Alexander
+    </li>
+    <li>
+      Alien Googah
+    </li>
+    <li>
+      Alien Morty
+    </li>
+    <li>
+      Alien Rick
+    </li>
+    <li>
+      Amish Cyborg
+    </li>
+    <li>
+      Annie
+    </li>
+    <li>
+      Antenna Morty
+    </li>
+    <li>
+      Antenna Rick
+    </li>
+    <li>
+      Ants in my Eyes Johnson
+    </li>
+    
+  </ul>
+  
+</div>
+`;
