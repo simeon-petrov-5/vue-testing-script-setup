@@ -47,3 +47,37 @@ dataProvider.loadCharacters = vi.fn(() => {
 	return  mockedCharacters;
 }) as  any;
 ```
+
+## ⚠️ A different approach | Workaround 2
+
+Colleagues from a  different project (Vue 2 + TS + Class components, etc.) also had such issues and not very consistent results from MSW + flushPromises/nextTick so they found a different workaround - In almost all of our components we have a var handling the loading state of that component/page. They check if this is set to the correct loading state and await 1ms, which buys enough time for the component to be mounted correctly.
+
+-----------
+I haven't tried this appraoch as we don't have access to the `$data` when using script setup, but probably if we use [defineExpose](https://vuejs.org/api/sfc-script-setup.html#defineexpose) we can manage to simulate the same functionality
+
+-----------
+
+**Examples**
+```
+export  function  ensureIsSet(
+	data: Record<string, unknown>, // use wrapper.vm.$data here
+	varname: string,
+	condition: unknown
+	) {
+	return  new  Promise(function(resolve) {
+		(function  waitFor() {
+			if (data[varname] === condition) return  resolve(true);
+			setTimeout(waitFor, 1);
+		})();
+	});
+}
+
+and how it is being used
+it('should match snapshot - create mode', async () => {
+	...
+	const  wrapper = wrapperFactory();
+	await  ensureIsSet(wrapper.vm.$data, 'dataLoaded', true);
+	expect(wrapper.element).toMatchSnapshotUnscoped();
+	...
+});
+``` 
